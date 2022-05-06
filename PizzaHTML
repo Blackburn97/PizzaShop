@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pizza</title>
+  <meta charset="utf-8">
+  
+    <link rel="stylesheet" href="Pizza.css" type="text/css" />
+    <!--linking the CCS style page in order to make changes to the apperance of the Web Page-->
+
+    <script src="PizzaFunctions.js"></script>
+    <!--links the Javascript function to the page so it all work together-->
+
+</head>
+
+<body>
+
+    <div id = "container"><!--this is the white space on the page that hold all of the information-->
+            <img src="BlackburnPizza.png" width = "400px">
+
+        <h1>Blackburn's Pizza!</h1>
+        <h2>Enter Your Full Name and Address below.</h2>
+        <h3>Please be sure that all the information is correct.</h3>
+        <!--This section consists of asking the user for their name and address for their pizza order-->
+            <form action = "PizzaFunctions.js">
+                <label for = "FullName">Full Name: </label>
+                <!--this is the label for the 'full name' text box -->
+                <input type = "text" id= "Customer" name = "Fullname"><br><br>
+
+                <label for= "Address"> Residential Address: </label>
+                <!--this is the label for the 'address' text box-->
+                <input type = "text" id= "Cust_Address" name = "Address"><br>
+            </form>
+        
+
+        
+</body>
+</html>
