@@ -1,0 +1,30 @@
+/*All this file does is style the page based on the tag you put inforamtion in*/
+h1{
+    font-size: 36px;
+    font-family: cursive;
+    font-style: italic;
+}
+h2{
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+body{
+    background-color: tomato;
+    /*so if you change the above color from gray to red, 
+    you will see the change on the browser AFTER you save and refresh the page*/
+}
+#container {/*This is for the white space on the page*/
+	width: 1200px;
+	margin: 0px auto;
+	padding: 15px;
+	background-color: #fff;
+    /*The reason we use # here is because we are call the div with the id of container
+    #- gets used when using/calling an id
+    .- gets used when using/calling a name  */
+}
+h4{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
