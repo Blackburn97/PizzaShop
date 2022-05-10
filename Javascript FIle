@@ -1,0 +1,73 @@
+function PizzaOrder(){
+    //function call plus the name of the function, function name is used then to call the 
+    //function and get it started when pressing the submit button on the htmlin the browser window
+
+    let name = document.getElementById("Customer").value;
+    // gets the name from the text box with the id of customer
+
+    let address = document.getElementById("Cust_Address").value;
+    //gets the address the address from the text box with the id of Cust_Address
+
+    let ordermethod = document.querySelector('input[name="eatingOption"]:checked').value
+    //gets the order method from the radio buttons on the html pages 
+    //and sets the value equal to what the user selected; Pick-up, Delivery, or Dine-In
+
+    let PizzaPrice = 0.00
+    //sets the price of the pizza to be 0
+
+
+    //this section of for loops/code cycles through all of the toppings to see what the 
+    //user selected for toppings from the checkboxes
+    let toppings = ""
+    for(x=1; x<=6; x++) {
+        if(document.querySelector('input[name=topping' + x +']:checked')) {
+            toppings = toppings + document.getElementById("topping" + x).value + ", "; 
+        }
+    }
+    //this for loop goes through the same process of looping through to find that selected
+    //toppings but this time adds .99 to the PizzPrice varible
+    // above to calulate a final cost for the pizza, which will be shown at the end of the function
+    for(x=1; x<=6; x++) {
+        if(document.querySelector('input[name=topping' + x +']:checked')) {
+            PizzaPrice = PizzaPrice + .99    
+        }
+    } 
+
+    //section of if statements will take the selected pizza size and will add it to the final pizza price
+    let PieSize = document.getElementById("pizzaSize").value;
+    if(PieSize == "Small"){
+        PizzaPrice = PizzaPrice + 10.99;
+        //if the user selects small, then it will add 10.99 to the PizzaPrice varible, 
+        //does the same thing to the other sizes, price will just vary.
+    }
+    else if(PieSize == "Medium"){
+        PizzaPrice = PizzaPrice + 12.99;
+    }
+    else if(PieSize == "Large"){
+        PizzaPrice = PizzaPrice + 14.99;
+    }
+    else if(PieSize == "Extra Large"){
+        PizzaPrice = PizzaPrice + 16.99;
+    }
+
+    let orderTime = new Date();//this just pulls the time from when the user places the order
+    let time = orderTime.getHours() + ":" + orderTime.getMinutes() + ":" + orderTime.getSeconds();
+
+
+    alert("Customer Name: " + name + "\nCustomer Address: " + address + "\nOrder Method: " +
+    ordermethod +"\nToppings: " + toppings 
+    + "\nPizza Size: " + PieSize + "\nTotal Price: $" + PizzaPrice
+    +"\nOrder Time : " + time);
+    //this alert will take all of the variables from above and places them into pop up window
+    //containing all of the information from the users input for their desired pizza
+    //including name, address, pizza toppings, pizza size, and order method
+
+
+    if (ordermethod == "Delivery"){
+        alert("Your pizza will be delivered in 30-40 minutes")
+    }   //if the user selected delivery, then it will pop up another alerts saying their 
+        //pizza will be delivered in a certian amount of time
+
+    document.write("Order Has Been placed! Thank you for ordering with Blackburn's Pizza");
+    //takes the user to a comfirmation page that thanks them for placing an order
+}
