@@ -62,6 +62,17 @@
                 <input type = "checkbox" id= "topping6" name = "topping6" value="Pineapple">
                 <label for = "topping6">Pineapple</label><br>
             </form>
+            
+             <h2>What size pizza would you like?</h2><!--this section is a dropdown menu for pizza size with prices,
+                                                    also will be included in js file for pricing purposes-->
+            <form action = "PizzaFunctions.js">
+                <select name = "size" id = "pizzaSize">
+                    <option  value="Small" >Small Pizza- 10 Inches: $10.99</option>
+                    <option  value="Medium">Medium Pizza- 12 Inches: $12.99</option>
+                    <option  value="Large">Large Pizza- 14 Inches: $14.99</option>
+                    <option  value="Extra Large">Extra Large Pizza- 18 Inches: $16.99</option>
+                </select>
+            </form>
         
 
         
