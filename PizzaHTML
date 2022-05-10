@@ -73,6 +73,18 @@
                     <option  value="Extra Large">Extra Large Pizza- 18 Inches: $16.99</option>
                 </select>
             </form>
+            
+                        <br><br><br>
+            <input type = "button" value = "Place Order" onclick= "PizzaOrder()">
+                <!--Allows the function to start and go through the process of making the pizza orders-->
+
+    </div>
+
+
+
+        
+</body>
+</html>
         
 
         
