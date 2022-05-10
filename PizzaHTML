@@ -30,6 +30,19 @@
                 <!--this is the label for the 'address' text box-->
                 <input type = "text" id= "Cust_Address" name = "Address"><br>
             </form>
+            
+                    <h2>Please Select Pick-Up, Delivery, or Dine-In.</h2>
+        <!--this section of the code allows the user to select how they want there pizza-->
+            <form action = "PizzaFunctions.js">
+                <!--When using Radio Buttons, all of the id's and names must be the same, values must differ-->
+                <input type="radio" id = "pick_up" name = "eatingOption" value = "Pick-up" checked>
+                <!--this option is for Pick-up, 'checked' automatically marks the pick-up button-->
+                <label for = "Pick-Up"> Pick-Up </label><br>
+                <input type="radio" id = "delivery" name = "eatingOption" value = "Delivery" >
+                <label for = "Delivery">Delivery</label><br>
+                <input type="radio" id = "Dine_in" name = "eatingOption" value = "Dine-in">
+                <label for = "Dine_in">Dine-In</label><br>
+            </form>
         
 
         
